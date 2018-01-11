@@ -2,6 +2,7 @@ import {allElem, oneElem} from 'gap-front-s';
 
 export {Dto} from './js/Dto.js';
 export {View} from './js/View.js';
+export {Loader} from './js/Loader.js';
 
 export function buildView(opts) {
     const views = [];
