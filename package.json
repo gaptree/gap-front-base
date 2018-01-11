@@ -1,0 +1,25 @@
+{
+  "name": "gap-front-base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://project.tecposter.cn/diffusion/88/gap-front-base.git",
+  "author": "zhanjh <zhanjh@126.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run jest && npm run eslint",
+    "jest": "jest",
+    "eslint": "eslint ."
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
+    "babel-preset-env": "^1.6.1",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "dependencies": {
+    "gap-front-event": "^1.0.0",
+    "gap-front-fun": "^1.0.5",
+    "gap-front-s": "^1.0.1",
+    "gap-front-trans": "^1.0.0"
+  }
+}
