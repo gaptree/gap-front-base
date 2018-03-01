@@ -1,6 +1,6 @@
 import {oneElem} from 'gap-front-s';
 import {PageConfig} from 'gap-front-page-config';
-import {tpl} from 'gap-front-fun';
+import {tpl, scriptJson} from 'gap-front-fun';
 import {trans} from 'gap-front-trans';
 
 let viewId = 0;
@@ -21,6 +21,7 @@ export class View {
         this.trans = trans;
         this.pageConfig = new PageConfig();
         this.getConfig = this.pageConfig.get;
+        this.scriptJson = scriptJson;
 
         this.id = 'v' + viewId++;
         this.dtoElems = {};
@@ -107,13 +108,6 @@ export class View {
         } else {
             throw new Error('unkown error in View');
         }
-    }
-
-    scriptJson(obj) {
-        return '<script type="text/javascript">'
-            + JSON.stringify(obj)
-            + '</script>'
-            + '<div class="data-rendering"></div>';
     }
 
     set(key, val) {

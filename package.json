@@ -12,13 +12,13 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-jest": "^22.0.4",
+    "babel-jest": "^22.4.1",
     "babel-preset-env": "^1.6.1",
     "regenerator-runtime": "^0.11.1"
   },
   "dependencies": {
     "gap-front-event": "^1.0.0",
-    "gap-front-fun": "^1.0.5",
+    "gap-front-fun": "^1.0.6",
     "gap-front-s": "^1.0.1",
     "gap-front-trans": "^1.0.0"
   }
