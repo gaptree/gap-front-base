@@ -1,5 +1,5 @@
 import {Event} from 'gap-front-event';
-import {s} from 'gap-front-s';
+import {allElem} from 'gap-front-web';
 
 export class Loader {
     constructor() {
@@ -15,11 +15,11 @@ export class Loader {
     }
 
     load() {
-        s('[zload]').forEach(elem => {
+        allElem('[zload]').forEach(elem => {
             this.event.trigger('zload', elem);
         });
 
-        s('[gap-load]').forEach(elem => {
+        allElem('[gap-load]').forEach(elem => {
             this.event.trigger('gapLoad', elem);
         });
     }

@@ -1,4 +1,4 @@
-import {allElem, oneElem} from 'gap-front-s';
+import {allElem, oneElem} from 'gap-front-web';
 
 export {Dto} from './js/Dto.js';
 export {View} from './js/View.js';

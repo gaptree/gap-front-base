@@ -2,7 +2,7 @@
   "name": "gap-front-base",
   "version": "1.0.2",
   "main": "index.js",
-  "repository": "https://project.tecposter.cn/diffusion/88/gap-front-base.git",
+  "repository": "https://github.com/gaptree/gap-front-base",
   "author": "zhanjh <zhanjh@126.com>",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,8 @@
   "dependencies": {
     "gap-front-event": "^1.0.0",
     "gap-front-fun": "^1.0.6",
-    "gap-front-s": "^1.0.1",
-    "gap-front-trans": "^1.0.0"
+    "gap-front-page-config": "^1.0.0",
+    "gap-front-trans": "^1.0.0",
+    "gap-front-web": "^1.0.1"
   }
 }

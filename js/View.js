@@ -1,4 +1,4 @@
-import {oneElem} from 'gap-front-s';
+import {oneElem} from 'gap-front-web';
 import {PageConfig} from 'gap-front-page-config';
 import {tpl, scriptJson} from 'gap-front-fun';
 import {trans} from 'gap-front-trans';
@@ -40,7 +40,7 @@ export class View {
 
         this.render();
 
-        this.ctn.s(`[dto-view="${this.id}"]`).map(elem => {
+        this.ctn.allElem(`[dto-view="${this.id}"]`).map(elem => {
             let key = elem.getAttribute('dto-key');
             if (!this.dtoElems[key]) {
                 this.dtoElems[key] = [];
@@ -57,15 +57,20 @@ export class View {
     startup() {
     }
 
-    view(selector) {
+    oneView(selector) {
         let elem = this.ctn.elem(selector);
         if (elem) {
             return elem._view || null;
         }
     }
 
+    view(selector) {
+        // deprecated
+        return this.oneView(selector);
+    }
+
 	
-    s(selector) {
+    allView(selector) {
         let viewArr = [];
         this.ctn.s(selector).forEach(elem => {
             if (elem._view) {
@@ -99,7 +104,7 @@ export class View {
         } else if (elem.tagName == 'INPUT') {
             elem.value = val;
         } else if (elem.tagName == 'SELECT') {
-            elem.elem(`option[value="${val}"]`).selected = true;
+            elem.oneElem(`option[value="${val}"]`).selected = true;
         } else if (elem.tagName == 'TEXTAREA') {
             elem.value = val;
             elem.innerHTML = val;
